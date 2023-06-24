@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Tab Icon -->
+    <link rel="icon" href="%PUBLIC_URL%/../images/favicon-32x32.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Phones | survey form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Phones Survey Form</h1>
+      <p id="description">
+        Thank you for taking the time to help us improve the platform
+      </p>
+    </header>
+
+    <main>
+      <form action="process.php" id="survey-form">
+        <div class="name">
+          <label for="name" id="name-label">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required />
+        </div>
+
+        <div class="email">
+          <label for="email" id="email-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <div class="age">
+          <label for="number" id="number-label">Age</label>
+          <input
+            type="number"
+            id="number"
+            min="10"
+            max="100"
+            placeholder="Enter your age"
+            required
+          />
+        </div>
+
+        <div class="phone-company">
+          <label for="dropdown">Which is your favorite phone company:</label>
+          <select name="dropdown" id="dropdown">
+            <option value="select an option" disabled selected>
+              select an option
+            </option>
+            <option value="Xiaomi">Xiaomi</option>
+            <option value="Oppo">Oppo</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Apple">Apple</option>
+            <option value="Vivo">Vivo</option>
+          </select>
+        </div>
+
+        <h2>Which is your favorite phone type:</h2>
+
+        <div class="phone-type">
+          <input
+            type="radio"
+            name="phone type"
+            id="flat"
+            value="flat"
+            checked
+          />
+          <label for="flat">Flat</label>
+        </div>
+
+        <div class="phone-type">
+          <input
+            type="radio"
+            name="phone type"
+            id="foldable"
+            value="foldable"
+          />
+          <label for="foldable">Foldable</label>
+        </div>
+
+        <h2>What are the things that you need in your phone:</h2>
+
+        <div class="needed-things">
+          <input type="checkbox" id="performance" value="performance" checked />
+          <label for="performance">Performance</label>
+        </div>
+
+        <div class="needed-things">
+          <input type="checkbox" id="battery" value="battery" />
+          <label for="battery">Battery</label>
+        </div>
+
+        <div class="needed-things">
+          <input type="checkbox" id="camera" value="camera" />
+          <label for="camera">Camera</label>
+        </div>
+
+        <div class="needed-things">
+          <input type="checkbox" id="display" value="display" />
+          <label for="display">Display</label>
+        </div>
+
+        <div class="needed-things">
+          <input type="checkbox" id="design" value="design" />
+          <label for="design">Design</label>
+        </div>
+
+        <div class="comment">
+          <label for="comments">Any comments or suggestions?</label>
+          <textarea
+            name="comment"
+            id="comments"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+
+        <div class="submit-button">
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
